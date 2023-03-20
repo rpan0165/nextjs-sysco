@@ -1,0 +1,72 @@
+.focus-image-section {
+  font-size: 1.6rem;
+  padding: 6.0rem 0;
+
+  h2 {
+    margin-bottom: 3.0rem;
+  }
+
+  .focus-image {
+    padding: 0 3.0rem;
+  }
+
+  .data-points {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .data-point-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .data-point {
+        display: flex;
+        flex-direction: row;
+
+        .icon-wrapper {
+          align-items: center;
+          border: 2px solid $color-brand-primary;
+          border-radius: 32px;
+          display: flex;
+          height: 6.4rem;
+          flex: 0 0 6.4rem;
+          justify-content: center;
+          margin-right: 2.4rem;
+          width: 6.4rem;
+
+          svg {
+            height: 22px;
+
+            path {
+              fill: $color-brand-primary;
+            }
+          }
+        }
+
+        .title-wrapper {
+          h6 {
+            @include myriad-pro-bold;
+            color: $color-black;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            font-size: 1.8rem;
+          }
+
+          p {
+            color: $color-dark-gray;
+            margin-top: 2.0rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .focus-image-section {
+    .data-point {
+      margin-bottom: 15px;
+    }
+  }
+}

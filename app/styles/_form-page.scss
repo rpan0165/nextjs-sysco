@@ -1,0 +1,169 @@
+.form-page {
+  background-size: cover;
+  background-position: top;
+  padding: 20rem 0 10rem;
+
+  .form-elements {
+    .text-container {
+      color: $color-white;
+      margin-right: 10rem;
+
+      h5 {
+        margin-top: 3rem;
+        @include myriad-pro-regular;
+      }
+
+      h6 {
+        color: $color-white;
+        margin-top: 3rem;
+        @include myriad-pro-regular;
+        line-height: 3.6rem;
+      }
+    }
+  }
+}
+
+.form-container {
+  text-align: center;
+  background-color: $color-white;
+  border-radius: 4px;
+  padding: 3rem;
+
+  h4 {
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  p {
+    font-size: 2.2rem;
+    color: $color-dark-gray;
+    margin-bottom: 2.5rem;
+  }
+
+  &.text {
+    .icon-success {
+      margin-bottom: 1rem;
+    }
+
+    &.success,
+    &.error {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      position: relative;
+      height: 721px;
+    }
+  }
+
+  &.content {
+    margin-top: 16.18rem;
+  }
+
+  .form-section-title {
+    left: 26px;
+    top: 34px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    color: $color-dark-gray;
+    margin-bottom: 8px;
+    text-align: left;
+
+    &.section-two {
+      margin-top: 12px;
+    }
+  }
+}
+
+.col-select {
+  position: relative;
+}
+
+.fields {
+  position: relative;
+  background-color: $color-white;
+  margin-top: 3.2rem;
+}
+
+.form-submit {
+  width: 24rem;
+}
+
+.intake-form-validation-text {
+  &.hidden {
+    display: none;
+  }
+
+  position: absolute;
+
+  h4 {
+    margin-bottom: 1.0rem;
+  }
+
+  p {
+    @include myriad-pro-regular;
+    color: $color-dark-gray;
+  }
+
+  .icon-success {
+    font-size: 7.2rem;
+    margin-top: 4.0rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-page {
+    padding: 95px 0 50px;
+
+    .form-elements {
+      .text-container {
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+
+      .form-headings {
+        h4 {
+          font-size: 42px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-page {
+    .form-elements {
+      justify-content: center;
+
+      .text-container {
+        padding: 0 20px;
+        margin-right: 0;
+        justify-content: center;
+        margin-bottom: 38px;
+        text-align: center;
+
+        h5 {
+          line-height: 35px;
+        }
+      }
+
+      .form-headings {
+        h4 {
+          margin-top: 25px;
+          font-size: 48px;
+        }
+
+        p {
+          font-size: 24px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+

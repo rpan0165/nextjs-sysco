@@ -1,0 +1,12 @@
+.wide-text-block {
+  @include fontSize(24px, 'body');
+  padding: 8.0rem 0;
+  
+  p {
+    margin-bottom: 1.0rem;
+  }
+
+  h6 {
+    margin-bottom: 1.0rem;
+  }
+}

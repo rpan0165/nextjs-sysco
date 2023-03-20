@@ -1,0 +1,228 @@
+.card-container {
+  padding: 8.0rem 0;
+
+  h3 {
+    margin-top: 1.5rem;
+  }
+
+  h6 {
+    margin-top: 2.0rem;
+  }
+
+  .card-grid {
+    margin-top: 8.0rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+
+    &.admin {
+      display: block;
+      text-align: center;
+
+      .card-column {
+        display: inline-block;
+        vertical-align: top;
+
+        &.col-sm-6 {
+          width: 45%;
+
+          &:nth-child(n+3) {
+            margin-top: 0;
+          }
+
+          &:nth-child(n+4) {
+            margin-top: 8.0rem;
+          }
+
+          &:nth-child(odd) {
+            clear: none;
+          }
+
+          &:nth-child(even) {
+            clear: both;
+          }
+        }
+
+        &.col-sm-4 {
+          width: 32%;
+
+          &:nth-child(n+4) {
+            margin-top: 0;
+          }
+
+          &:nth-child(n+5) {
+            margin-top: 8.0rem;
+          }
+
+          &:nth-child(4n+4) {
+            clear: none;
+          }
+
+          &:nth-child(5n+5) {
+            clear: both;
+          }
+        }
+
+        &.col-sm-3 {
+          width: 24%;
+
+          &:nth-child(n+5) {
+            margin-top: 0;
+          }
+
+          &:nth-child(n+6) {
+            margin-top: 8.0rem;
+          }
+
+          &:nth-child(5n+5) {
+            clear: none;
+          }
+
+          &:nth-child(6n+6) {
+            clear: both;
+          }
+        }
+      }
+    }
+  }
+
+  .card-column {
+    display: flex;
+    flex-direction: column;
+
+    &.col-sm-6 {
+      &:nth-child(n+3) {
+        margin-top: 8.0rem;
+      }
+
+      &:nth-child(odd) {
+        clear: both;
+      }
+    }
+
+    &.col-sm-4 {
+      &:nth-child(n+4) {
+        margin-top: 8.0rem;
+      }
+
+      &:nth-child(4n+4) {
+        clear: both;
+      }
+    }
+
+    &.col-sm-3 {
+      &:nth-child(n+5) {
+        margin-top: 8.0rem;
+      }
+
+      &:nth-child(5n+5) {
+        clear: both;
+      }
+    }
+
+    .card-body {
+      max-width: 45.0rem;
+      align-self: center;
+      padding: 0;
+      width: inherit;
+
+      h6 {
+        @include myriad-pro-bold;
+        color: $color-black;
+        margin-top: 2.4rem;
+      }
+
+      p {
+        @extend .body-style-1;
+        color: $color-dark-gray;
+        margin-top: 2.4rem;
+        margin-bottom: 0;
+
+        a {
+          color: $color-brand-primary;
+          text-decoration: underline;
+        }
+      }
+
+      &.border-class {
+        border: 1px solid #e4e5e6;
+
+        .card-text {
+          padding: 3.5rem 2.8rem 3.5rem;
+
+          h6 {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .card-link {
+        display: block;
+        @include myriad-pro-black;
+        letter-spacing: 0.2rem;
+        color: $color-brand-primary;
+        text-transform: uppercase;
+        text-decoration: underline;
+        margin-top: 2.6rem;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 7.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .card-container {
+    padding: 44px 0;
+
+    .card-grid {
+      margin-top: 20px;
+
+      .card-text {
+        text-align: center;
+
+        h6 {
+          font-size: 20px;
+        }
+      }
+
+      .card-swiper {
+        padding: 10px 0;
+
+        .swiper-wrapper {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  .button {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .card-container {
+
+    .card-grid {
+
+      .card-text {
+
+        h6 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

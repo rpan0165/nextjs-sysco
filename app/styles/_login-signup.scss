@@ -1,0 +1,67 @@
+.login-signup {
+  margin-top: 6rem;
+  margin-bottom: 12rem;
+
+  .signup {
+    border-style: groove;
+    padding-bottom: 4rem;
+
+    h4 {
+      margin-top: 3rem !important;
+      margin-bottom: 3.5rem !important;
+    }
+  }
+  .login {
+    border-style: groove;
+    padding-bottom: 4rem;
+
+    h4 {
+      margin-top: 6rem;
+      margin-bottom: 6.5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .login-signup {
+    .login {
+      h4 {
+        margin-bottom: 3.5rem;
+      }
+
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1110px) {
+  .login-signup {
+    .login {
+      h4 {
+        margin-bottom: 13.5rem;
+      }
+
+    }
+  }
+}
+
+@media (min-width: 1110px) and (max-width: 1199px) {
+  .login-signup {
+    .login {
+      h4 {
+        margin-bottom: 11.5rem;
+      }
+
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .login-signup {
+    .login {
+      h4 {
+        margin-bottom: 6.5rem;
+      }
+
+    }
+  }
+}

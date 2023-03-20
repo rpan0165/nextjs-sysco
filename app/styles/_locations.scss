@@ -1,0 +1,402 @@
+.our-locations {
+  .locations-app {
+    padding: 6rem 0;
+
+    .searchContainer {
+      .searchBar {
+        display: flex;
+        flex-direction: row;
+        border-radius: 3px;
+        justify-content: space-between;
+        border: solid 1px #e4e5e6;
+        padding: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+
+        .searchCol {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          flex-grow: 1;
+          flex-shrink: 1;
+          @include fontSize(14px);
+
+          .search-select-container {
+            height: 100%;
+
+            .custom-select-label {
+              @include myriad-pro-regular;
+              @include fontSize(12px);
+              position: absolute;
+              top: -1.5rem;
+              padding-left: 1rem;
+              color: $color-brand-primary;
+              transition: all .25s ease-in-out;
+
+              &.visible {
+                display: block;
+              }
+
+              &.hidden {
+                display: none;
+              }
+            }
+
+            .Select {
+              height: 100%;
+
+              &.has-value {
+                .Select-control {
+                  border-color: $color-brand-primary;
+                }
+              }
+
+              .Select-control {
+                height: 100%;
+                border-width: 0 0 1px 0;
+                border-color: $color-med-gray;
+                border-radius: 0px;
+                @include fontSize(16px);
+
+                .Select-placeholder {
+                  padding-bottom: 8px;
+                }
+
+                .Select-input {
+                  padding-bottom: 8px;
+                }
+
+                .VirtualizedSelectOption {
+                  padding-left: 16px;
+
+                  &:hover {
+                    background-color: $color-light-gray;
+                    color: $color-brand-primary;
+                  }
+
+                  &.VirtualizedSelectFocusedOption {
+                    background-color: $color-light-gray;
+                    color: $color-brand-primary;
+                  }
+                }
+              }
+            }
+          }
+
+
+        }
+
+        input[type=submit].submit-search {
+          @include myriad-pro-semibold;
+          @include fontSize(14px);
+          width: 100%;
+          background-color: $color-brand-secondary;
+          color: $color-white;
+          text-transform: uppercase;
+          transition: all .25s ease-in-out;
+          border-radius: 3px;
+          height: 40px;
+          cursor: pointer;
+
+          &:focus {
+            color: $color-white;
+          }
+
+          &:active {
+            color: $color-white;
+            background-color: $color-dark-green;
+          }
+
+          &:hover {
+            color: $color-white;
+          }
+
+          &:disabled {
+            background-color: $color-dark-gray;
+          }
+        }
+
+        .searchBox-label {
+          position: absolute;
+          left: 2rem;
+          display: flex;
+          padding-bottom: .5rem;
+          justify-content: center;
+        }
+
+        .searchBox-clear {
+          position: absolute;
+          right: 2.5rem;
+          padding-bottom: .5rem;
+          cursor: pointer;
+          background-color: transparent;
+          color: $color-med-gray;
+          @include fontSize(18px);
+
+          &:hover {
+            color: #D0021B;
+          }
+        }
+
+        input[type=search].searchBox {
+          width: 100%;
+          height: 100%;
+          border-width: 0px 0px 1px 0px;
+          border-color: $color-med-gray;
+          @include fontSize(16px);
+          @include myriad-pro-regular;
+          padding-left: 3rem;
+          padding-bottom: .5rem;
+          transition: all .25s ease-in-out;
+
+          &:focus {
+            border-color: $color-brand-primary;
+            outline: none;
+          }
+
+          &::-webkit-input-placeholder {
+            @include fontSize(16px);
+            @include myriad-pro-regular;
+            padding-left: 1rem;
+            color: $color-med-gray;
+          }
+
+          &::-moz-placeholder {
+            @include fontSize(16px);
+            @include myriad-pro-regular;
+            padding-left: 1rem;
+            color: $color-med-gray;
+          }
+
+          &:-ms-input-placeholder {
+            @include fontSize(16px);
+            @include myriad-pro-regular;
+            padding-left: 1rem;
+            color: $color-med-gray;
+          }
+
+          &:-moz-placeholder {
+            @include fontSize(16px);
+            @include myriad-pro-regular;
+            padding-left: 1rem;
+            color: $color-med-gray;
+          }
+        }
+      }
+    }
+
+    .googleMap {
+      margin-top: 48px;
+      height: 600px;
+    }
+
+    .map-info-card {
+      .yourOpco {
+        @include myriad-pro-bold;
+        @include fontSize(10px);
+        color: $color-brand-primary;
+        margin-bottom: .5rem;
+      }
+
+      h6 {
+        @include myriad-pro-bold;
+        @include fontSize(14px);
+        color: $color-black;
+        margin-bottom: .5rem;
+      }
+
+      .address {
+        @include myriad-pro-regular;
+        @include fontSize(14px);
+        color: $color-dark-gray;
+      }
+
+      p a {
+        @include myriad-pro-regular;
+        @include fontSize(12px);
+      }
+    }
+
+    .no-search-results {
+      @include myriad-pro-semibold;
+      @include fontSize(26px);
+      display: flex;
+      justify-content: center;
+      width: 30%;
+      padding: 4rem 4rem;
+      background-color: $color-white;
+      border: solid 1px darken($color-light-gray, 5%);
+      border-radius: 3px;
+      margin-bottom: 4rem;
+    }
+
+    .locations-list {
+      text-align: center;
+
+      .locations-grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &.no-results {
+          justify-content: center;
+        }
+      }
+
+      .btn-green {
+        width: 30%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        @include fontSize(16px);
+        cursor: pointer;
+        border-radius: 3px;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+
+      .contact-card {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: 2.0rem 0;
+
+        &.blank-card {
+          border-width: 0;
+        }
+
+        .yourOpco {
+          @include myriad-pro-semibold;
+          @include fontSize(12px);
+          position: absolute;
+          top: 8px;
+          right: -8px;
+          padding: 8px 10px;
+          border-radius: 4px;
+          background-color: $color-brand-primary;
+          color: $color-white;
+        }
+
+        .contact-details {
+          .detail-row {
+            flex-direction: row;
+
+            .contact-icon {
+              margin-right: 2.4rem;
+
+              i {
+                @include fontSize(18px);
+              }
+            }
+          }
+        }
+
+        .card-distance {
+          @include myriad-pro-bold;
+          @include fontSize(12px);
+          height: 100%;
+          color: $color-dark-gray;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin-top: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, tabelts, less than 992px)
+@media (max-width: 991px) {
+  .our-locations {
+    .locations-app {
+      .searchContainer {
+        .searchBar {
+          border: none;
+          flex-wrap: wrap;
+
+          .searchCol {
+            margin-top: 2rem;
+
+            input[type=search].searchBox {
+              padding-bottom: 8px;
+            }
+
+            .searchBox-label {
+              padding-bottom: 8px;
+            }
+
+            .Select-control {
+              border-width: 0 0 1px 0;
+              border-color: $color-med-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .our-locations {
+    .locations-app {
+      .searchContainer {
+        display: flex;
+        justify-content: center;
+
+        .searchBar {
+          padding: 0;
+          max-width: 85%;
+
+          .searchBox-clear {
+            font-size: 18px;
+          }
+        }
+
+      }
+
+      .googleMap {
+        display: none;
+      }
+
+      .locations-list {
+        .locations-grid {
+          justify-content: center;
+
+          .contact-card {
+            padding: 4.0rem 5.6rem 4.0rem 9rem;
+
+            .organization-name {
+              font-size: 13px;
+            }
+
+            .detail-row .contact-icon i {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .btn-green {
+          width: 85%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .our-locations {
+    .locations-app {
+      .locations-list {
+        .locations-grid {
+          .contact-card {
+            padding: 4.0rem 5.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+

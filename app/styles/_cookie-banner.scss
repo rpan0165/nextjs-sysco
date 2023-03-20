@@ -1,0 +1,51 @@
+.cc-banner {
+  .cc-message {
+    font-size: 14px;
+
+    .cc-link {
+      font-weight: bold;
+    }
+  }
+
+  &.cc-bottom.cc-theme-block {
+    border-top-width: 4px;
+    border-top-color: $color-brand-secondary;
+    border-top-style: solid;
+  }
+
+  &.cc-top {
+    top: 73px;
+
+    &.cc-theme-block {
+      border-bottom-width: 4px;
+      border-bottom-color: $color-brand-secondary;
+      border-bottom-style: solid;
+    }
+  }
+}
+
+.cc-window {
+  &.cc-floating {
+    top: 84px;
+  }
+}
+
+.cc-compliance {
+  .cc-btn {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+}
+
+.cc-theme-block {
+  .cc-compliance {
+    .cc-btn {
+      border-radius: 3px;
+      border-width: 1px;
+    }
+
+    &+.cc-btn {
+      margin-left: 1em;
+    }
+  }
+}

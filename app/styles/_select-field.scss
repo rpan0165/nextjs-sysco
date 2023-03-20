@@ -1,0 +1,106 @@
+@import '@material/select/mdc-select';
+@import '@material/textfield/mdc-text-field';
+@import '@material/floating-label/mdc-floating-label';
+@import '@material/notched-outline/mdc-notched-outline';
+@import '@material/list/mdc-list';
+@import '@material/select/icon/mdc-select-icon';
+@import "@material/select/helper-text/mdc-select-helper-text";
+
+.select-field-component {
+  height: 52px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+
+  @include mdc-select-helper-text-validation-color($color-red);
+
+/* Doesn't seem to be a publically available mixin? */
+  &.mdc-select--invalid .mdc-select__dropdown-icon {
+    @include mdc-select-dd-arrow-svg-bg_($color-red, 1);
+  }
+
+  &.mdc-select--outlined .mdc-select__selected-text {
+    font-size: 1.5rem;
+    align-items: center;
+    height: 52px;
+    color: $color-dark-gray;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  &.mdc-select--focused:not(.mdc-select--invalid) {
+    @include mdc-select-label-color($color-brand-secondary);
+    @include mdc-select-outline-color($color-brand-secondary);
+  }
+
+  &.mdc-select--invalid {
+    @include mdc-select-label-color($color-red);
+    @include mdc-select-outline-color($color-red);
+  }
+
+  &.mdc-select--outlined.mdc-select--invalid.mdc-select--focused {
+    @include mdc-select-label-color($color-red);
+  }
+
+  &.mdc-select--outlined:not(.mdc-select--focused):not(.mdc-select--invalid) .mdc-floating-label--float-above {
+    color: $color-black;
+  }
+  /* Floating Label */
+  &.mdc-select--outlined .mdc-floating-label.mdc-floating-label--float-above {
+    font-size: 1.6rem;
+  }
+
+  &.mdc-select--outlined .mdc-floating-label {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+}
+
+.select-menu-style {
+  font-size: 1.6rem;
+
+  .mdc-list .mdc-list-item {
+    font-size: 14px;
+  }
+
+  &.mdc-select__menu .mdc-list .mdc-list-item.mdc-list-item--selected::before {
+    background-color: $color-white;
+  }
+
+  &.mdc-select__menu .mdc-list .mdc-list-item.mdc-list-item--selected::after {
+    background-color: $color-white;
+  }
+
+  &.mdc-select__menu .mdc-list .mdc-list-item.mdc-list-item--hover::before {
+    background-color: $color-light-gray;
+  }
+  &.mdc-select__menu .mdc-list .mdc-list-item.mdc-list-item--hover::after {
+    background-color: $color-light-gray;
+  }
+}
+
+.mdc-select-field-helper-text--validation-msg {
+  display: none;
+  height: 14px;
+  margin-bottom: 12px;
+  margin-top: -12px;
+  font-family: myriad-pro, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  color:$color-red;
+}
+
+.mdc-select--invalid + .mdc-select-field-helper-text--validation-msg {
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .select-field-component {
+      &.mdc-select--outlined .mdc-floating-label {
+        line-height: 18px;
+      }
+  }
+}

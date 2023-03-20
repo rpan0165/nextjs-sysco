@@ -1,0 +1,215 @@
+.tile-section-container {
+  text-align: center;
+  padding: 8.0rem 0;
+
+  &.admin {
+    .tile-container {
+      display: block;
+
+      .tile,
+      .image-tile {
+        display: inline-block;
+        margin: 1.0rem auto;
+        vertical-align: top;
+      }
+
+      &.two-columns {
+        .tile,
+        .image-tile {
+          float: left;
+          margin: 1rem;
+
+          &:nth-of-type(2n+2) {
+            clear: left;
+          }
+        }
+      }
+    }
+  }
+
+  .containerSubheading {
+    margin-top: 3.0rem;
+  }
+
+  .tile-container {
+    margin-top: 4.0rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .tile-break {
+      flex-basis: 100%;
+    }
+
+    .image-tile {
+      position: relative;
+      width: 34.1rem;
+      margin: 1.0rem;
+
+      a {
+        cursor: pointer;
+      }
+
+      .image-tile-main {
+        h6 {
+          @include myriad-pro-black;
+          color: $color-white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+          &.large-header {
+            font-size: 64px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &.image-tile-hoverable {
+        .image-tile-hover {
+          display: flex;
+          flex-direction: column;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 3.6rem;
+          justify-content: center;
+          text-align: left;
+          transition: opacity 125ms ease-in-out;
+
+          .bar {
+            width: 6.0rem;
+            border-bottom: 4px solid $color-white;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+          }
+
+          h6 {
+            position: relative;
+            @include myriad-pro-bold;
+            color: $color-white;
+          }
+
+          p {
+            @include myriad-pro-semibold;
+            font-size: 1.8rem;
+            color: $color-white;
+            margin-top: 1.0rem;
+            line-height: 1.2;
+          }
+
+          .tile-link {
+            display: block;
+            @include myriad-pro-black;
+            letter-spacing: 0.2rem;
+            color: $color-white;
+            text-transform: uppercase;
+            text-decoration: underline;
+            margin-top: 2.6rem;
+            font-size: 14px;
+          }
+
+          &.large-image-tile {
+            h6 {
+              font-size: 64px;
+              font-weight: bold;
+            }
+            p {
+              font-size: 24px;
+              font-weight: normal;
+            }
+          }
+        }
+
+        &:hover {
+          .image-tile-hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .tile {
+      width: 30.0rem;
+      border: 1px solid $color-light-gray;
+      margin: 2.0rem;
+      min-height: 28.7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2.0rem;
+      background-color: $color-white;
+
+      .tile-items {
+        flex: 1 0 0%;
+        text-align: center;
+
+        h1 {
+          @include myriad-pro-semibold;
+          font-size: 3.6rem;
+          line-height: 3.4rem;
+          color: $color-black;
+          padding-bottom: 3.0rem;
+          margin: 0;
+        }
+
+        p {
+          @include myriad-pro-regular;
+          font-size: 2.0rem;
+          line-height: 2.8rem;
+          color: $color-dark-gray;
+          margin: 0;
+        }
+
+        .tile-image {
+          max-width: 26.0rem;
+          margin-bottom: 2.0rem;
+        }
+
+        svg {
+          height: 60px;
+          margin-bottom: 10px;
+
+          path {
+            fill: $color-brand-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .tile-section-container {
+    padding: 4.0rem 0;
+
+    h2 {
+      padding: 0 10px;
+    }
+
+    .tile-container {
+      margin-top: 0;
+    }
+
+    .containerSubheading {
+      margin-top: 1.8rem;
+
+      p {
+        padding: 0 1.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    &.tile-container-width {
+      max-width: 1238px;
+    }
+  }
+}

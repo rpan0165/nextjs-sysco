@@ -1,0 +1,18 @@
+.linked-list {
+  @include myriad-pro-bold;
+  letter-spacing: 0.2rem;
+  text-align: left;
+  text-decoration: underline;
+  color: $color-white;
+  list-style: none;
+  padding-left: 0;
+  text-transform: uppercase;
+
+  a, a:visited {
+     color: $color-white;
+   }
+
+   li {
+     padding-top: 1.0rem;
+   }
+}

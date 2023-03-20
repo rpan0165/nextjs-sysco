@@ -1,0 +1,245 @@
+/**********************************************************
+  TYPOGRAPHY
+**********************************************************/
+
+/*********************************************************
+
+  Calculate font sizes
+
+  Usage:
+
+  h2 {
+    @include fontSize(64px);
+  }
+
+**********************************************************/
+
+@mixin fontSize($size, $element: 'h') {
+  font-size: $size;
+  $xs: $size;
+  $sm: $size;
+  $md: $size;
+
+  @if $size == 96px {
+    /* h1 */
+    $xs: 42px;
+    $sm: 42px;
+    $md: 64px;
+  } @else if $size == 72px {
+    /* h2 */
+    $xs: 36px;
+    $sm: 36px;
+    $md: 48px;
+  } @else if $size == 64px {
+    /* h3 */
+    $xs: 26px;
+    $sm: 26px;
+    $md: 36px;
+  } @else if $size == 48px {
+    /* h4 */
+    $xs: 20px;
+    $sm: 20px;
+    $md: 24px;
+  } @else if $size == 36px and $element == 'h' {
+    /* h5 */
+    $xs: 18px;
+    $sm: 18px;
+    $md: 20px;
+  } @else if $size == 24px and $element == 'h' {
+    /* h6 */
+    $xs: 16px;
+    $sm: 16px;
+    $md: 18px;
+  } @else if $size == 18px and $element == 'h' {
+    /* h7 */
+    $xs: 12px;
+    $sm: 12px;
+    $md: 14px;
+  } @else if $size == 36px and $element == 'body' {
+    /* body 3 */
+    $xs: 20px;
+    $sm: 20px;
+    $md: 36px;
+  } @else if $size == 24px and $element == 'body' {
+    /* body 2 */
+    $xs: 18px;
+    $sm: 18px;
+    $md: 24px;
+  } @else if $size == 18px and $element == 'body' {
+    /* body 1 */
+    $xs: 16px;
+    $sm: 16px;
+    $md: 18px;
+  } @else if $size == 16px {
+    /* buttons */
+    $xs: 13px;
+    $sm: 13px;
+    $md: 16px;
+  } @else if $size == 14px {
+    /* links? */
+    $xs: 12px;
+    $sm: 12px;
+    $md: 14px;
+  }
+
+  // Extra Small (Portrait Phone)
+  @media (max-width: 575px) {
+    font-size: $xs;
+  }
+
+  // Small (Landscape Phone)
+  @media (min-width: 576px) and (max-width: 767px) {
+    font-size: $sm;
+  }
+
+  // Medium (Tablet)
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: $md;
+  }
+
+  /* // Don't have definitions for these
+  // Large (Desktop)
+  @media (min-width: 992px) and (max-width: 1199px) {
+    font-size: $size;
+  }
+
+  // Extra Large (Large Desktop)
+  @media (min-width: 1200px) {
+    font-size: $size;
+  }
+  */
+}
+
+/**********************************************************
+  Base font styles
+**********************************************************/
+& {
+  @include myriad-pro-regular;
+  color: $color-black;
+}
+
+/**********************************************************
+  Heading styles
+**********************************************************/
+h1 {
+  @include myriad-pro-bold;
+  @include fontSize(96px);
+  line-height: 1;
+  margin: 0;
+}
+
+h2 {
+  @include myriad-pro-bold;
+  @include fontSize(72px);
+  line-height: 1;
+  margin: 0;
+}
+
+h3 {
+  @include myriad-pro-bold;
+  @include fontSize(64px);
+  line-height: 1;
+  margin: 0;
+}
+
+h4 {
+  @include myriad-pro-bold;
+  @include fontSize(48px);
+  margin: 0;
+}
+
+h5 {
+  @include myriad-pro-bold;
+  @include fontSize(36px);
+  margin: 0;
+
+  @media (max-width: 767px) {
+    @include myriad-pro-semibold;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    @include myriad-pro-semibold;
+  }
+}
+
+h6 {
+  @include myriad-pro-regular;
+  @include fontSize(24px);
+  color: $color-dark-gray;
+  margin: 0;
+}
+
+/**********************************************************
+  Body styles
+**********************************************************/
+.body-style-1 {
+  @include fontSize(18px, 'body');
+  color: $color-dark-gray;
+
+  a {
+    @include fontSize(18px, 'body');
+  }
+
+  @media (max-width: 767px) {
+    color: $color-dark-gray;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    color: $color-dark-gray;
+  }
+}
+
+.body-style-2 {
+  @include fontSize(24px, 'body');
+  color: $color-dark-gray;
+
+  a {
+    @include fontSize(24px, 'body');
+  }
+}
+
+.body-style-3 {
+  @include fontSize(36px, 'body');
+  color: $color-dark-gray;
+
+  a {
+    @include fontSize(36px, 'body');
+  }
+}
+
+/**********************************************************
+  Link styles
+**********************************************************/
+.bold-link {
+  @include myriad-pro-black;
+  @include fontSize(14px);
+  color: $color-brand-primary;
+  text-decoration: underline;
+
+  &:hover {
+    color: $color-brand-primary;
+  }
+}
+
+/**********************************************************
+  Input Mixin
+**********************************************************/
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    @content;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

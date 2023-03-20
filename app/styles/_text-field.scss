@@ -1,0 +1,112 @@
+@import '@material/notched-outline/mdc-notched-outline';
+@import '@material/textfield/mdc-text-field';
+@import '@material/floating-label/mdc-floating-label';
+@import "@material/textfield/helper-text/mdc-text-field-helper-text";
+
+.text-field-component {
+  height: 52px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+
+  label.error {
+    display: none !important;
+  }
+
+  .form-text-area {
+    height: 144px;
+    resize: none;
+  }
+
+  &.text-area-component {
+    height: 144px;
+  }
+
+  @include mdc-text-field-helper-text-validation-color($color-red);
+
+  /* Generic MDC Text Field */
+  @include mdc-text-field-ink-color($color-dark-gray);
+
+  .mdc-text-field__input {
+    font-size: 1.6rem;
+    position: absolute;
+  }
+
+  &.mdc-text-field--focused:not(.mdc-text-field--invalid) .mdc-text-field__input:required ~ .mdc-notched-outline .mdc-floating-label::after {
+    color: $color-brand-secondary;
+  }
+
+  /* Error States */
+  &.mdc-text-field--invalid:not(.mdc-text-field--focused) {
+    @include mdc-notched-outline-color($color-red);
+    @include mdc-text-field-label-color($color-red);
+  }
+
+  &.mdc-text-field--invalid.mdc-text-field--focused {
+    @include mdc-text-field-label-color($color-red);
+    @include mdc-notched-outline-color($color-red);
+  }
+
+  /* Notched outline Text Field styles */
+  @include mdc-notched-outline-color($color-med-gray);
+
+  /* Regular label for Text Field */
+  @include mdc-text-field-label-color($color-dark-gray);
+
+  /* Floating Label */
+  .mdc-floating-label {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+
+  &.mdc-text-field--focused:not(.mdc-text-field--invalid) {
+    @include mdc-notched-outline-color($color-brand-secondary);
+  }
+
+
+  &.mdc-text-field--focused:not(.mdc-text-field--invalid) .mdc-floating-label--float-above {
+    color: $color-brand-secondary;
+  }
+
+  &.mdc-text-field:not(.mdc-text-field--focused):not(.mdc-text-field--invalid) .mdc-floating-label--float-above {
+    color: $color-black;
+  }
+
+  &.mdc-text-field .mdc-floating-label--float-above {
+    font-size: 1.6rem;
+  }
+
+  /* Date Type Text Field Code */
+  input[type=date]::-webkit-inner-spin-button,
+  input[type=date]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type=date]::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+
+.mdc-text-field-helper-text--validation-msg {
+  display: none;
+  height: 14px;
+  margin-bottom: 12px;
+  margin-top: -12px;
+  font-family: myriad-pro, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+}
+
+.mdc-text-field--invalid + .mdc-text-field-helper-text--validation-msg {
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .text-field-component {
+    .mdc-floating-label {
+      line-height: 18px;
+    }
+  }
+}

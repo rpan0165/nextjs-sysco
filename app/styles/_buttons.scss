@@ -1,0 +1,76 @@
+/**********************************************************
+  BUTTONS
+**********************************************************/
+.btn {
+  font-size: 1.6rem;
+  border-radius: 3px;
+}
+
+.btn-green {
+  @include myriad-pro-semibold;
+  background-color: $color-brand-secondary;
+  color: $color-white;
+  letter-spacing: 0.02rem;
+  padding: 1.2rem 5.0rem;
+  text-transform: uppercase;
+  transition: all .25s ease-in-out;
+
+  &:focus {
+    color: $color-white;
+  }
+
+  &:active {
+    color: $color-white;
+    background-color: $color-dark-green;
+  }
+
+  &:hover {
+    color: $color-white;
+    box-shadow: 0 0 1.0rem rgba(0, 0, 0, 0.5);
+  }
+
+  &:disabled {
+    background-color: $color-dark-gray;
+    cursor: default;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.btn-white-border {
+
+  @include myriad-pro-bold;
+  text-transform: uppercase;
+  color: $color-white;
+  font-size: 1.6rem;
+  letter-spacing: 0.03rem;
+  border: solid 1px $color-white;
+  width: 18.0rem;
+  height: 4.8rem;
+  text-align: center;
+  transition: all .25s ease-in-out;
+  padding: 1.2rem;
+
+    &:focus {
+      box-shadow: 0 0 1.0rem rgba(0, 0, 0, 0.5);
+      color: $color-white;
+    }
+
+    &:hover {
+      box-shadow: 0 0 1.0rem rgba(0, 0, 0, 0.5);
+      color: $color-white;
+    }
+
+    &:active {
+      background-color: $color-light-gray;
+      color: $color-dark-gray;
+    }
+}
+
+@media (max-width: 767px) {
+  .btn-green {
+    width: 100%;
+  }
+}

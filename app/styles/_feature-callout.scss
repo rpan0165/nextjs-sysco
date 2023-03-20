@@ -1,0 +1,45 @@
+// HOME PAGE
+&.home-page {
+  .feature-callout {
+    @include myriad-pro-regular;
+    padding: 27.6rem 0;
+    background-size: cover;
+    color: $color-white;
+    background-color: transparent;
+      background-size: cover;
+      background-position: center;
+
+    h2 {
+      margin-bottom: 3.8rem;
+      letter-spacing: -0.2rem;
+    }
+
+    p {
+      @extend .body-style-2;
+      color: $color-white;
+      margin-bottom: 3.8rem;
+    }
+  }
+}
+
+// STANDARD PAGE
+&.standard-page {
+  .feature-callout {
+    padding: 8rem 0;
+    color: $color-black;
+    border: 1px solid $color-light-gray;
+
+    h2 {
+      margin-bottom: 3.8rem;
+    }
+
+    p {
+      @extend .body-style-2;
+      padding-bottom: 3.8rem;
+    }
+
+    img {
+      margin-bottom: 3.8rem;
+    }
+  }
+}

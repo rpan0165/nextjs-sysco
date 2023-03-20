@@ -1,0 +1,107 @@
+.grid-container {
+
+  a {
+    text-decoration: none;
+  }
+
+  .col-mods {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h2 {
+    @include myriad-pro-bold;
+    letter-spacing: -0.19rem;
+    text-align: center;
+    color: $color-black;
+    padding: 6.0rem 0;
+  }
+
+  .contact-photo {
+    height: 44.0rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0.45rem;
+    padding: 3.0rem;
+    cursor: pointer;
+
+    .contact-details {
+
+      h6 {
+        @include myriad-pro-black;
+        text-align: left;
+        color: $color-white;
+        letter-spacing: 0;
+      }
+
+      p {
+        @include myriad-pro-semibold;
+        font-size: 1.6rem;
+        text-align: left;
+        color: $color-white;
+      }
+    }
+  }
+
+  .contact-text {
+
+    height: 44.0rem;
+    display: flex;
+    margin: 0.45rem;
+    background-color: $color-dark-gray;
+
+    .text-details {
+
+      padding: 9.9rem;
+
+      h4 {
+        @include myriad-pro-black;
+        text-align: left;
+        color: $color-white;
+        text-transform: uppercase;
+        padding: 0;
+        max-width: 57.0rem;
+      }
+
+      h5 {
+        @include myriad-pro-regular;
+        text-align: left;
+        color: $color-white;
+        max-width: 57.0rem;
+      }
+
+      .button-mods {
+        margin-top: 3.9rem;
+      }
+
+    }
+
+    .text-details-small {
+
+      padding: 4.0rem;
+
+      h4 {
+        @include myriad-pro-black;
+        font-size: 3.6rem;
+        text-align: left;
+        color: $color-white;
+        margin-top: 9.0rem;
+        text-transform: uppercase;
+        max-width: 57.0rem;
+      }
+
+      h5 {
+        @include myriad-pro-regular;
+        font-size: 2.4rem;
+        text-align: left;
+        color: $color-white;
+        max-width: 57.0rem;
+        margin-top: 2.0rem;
+      }
+
+      .button-mods {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}

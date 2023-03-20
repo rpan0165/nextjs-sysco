@@ -1,0 +1,21 @@
+.blue-logo-callout {
+  background-color: $color-brand-primary;
+  padding: 4.0rem 0;
+
+  .foodie-logo {
+    margin: 0 auto;
+  }
+
+  p {
+    color: $color-white;
+    @include myriad-pro-regular;
+    text-align: center;
+    line-height: 2.7rem;
+    margin-top: 3.0rem;
+  }
+
+  .btn-white-border {
+    margin-top: 1.5rem;
+    border: 1px solid rgba($color-white, .4);
+  }
+}

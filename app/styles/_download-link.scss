@@ -1,0 +1,116 @@
+// ALL PAGES
+.download-link-list-container {
+  .optionalLinkListHeading {
+    color: $color-dark-gray;
+    font-size: 1.8rem;
+    @include myriad-pro-regular;
+  }
+
+  padding: 2.0rem 0;
+
+  .download-links {
+    .download-link {
+      padding: 2.1rem 0;
+
+      .link-items {
+        display: flex;
+        justify-content: flex-start;
+        align-items:center;
+
+        img {
+          height: 1.8rem;
+          width: 1.8rem;
+        }
+
+        .text-elements {
+          display:flex;
+          flex-direction: column;
+          flex: 1 0 0%;
+
+          a, a:hover, a:active, a:focus, a:visited {
+            outline: none;
+            text-decoration: none;
+          }
+
+          h6 {
+            color: $color-dark-gray;
+            font-size: 1.8rem;
+            @include myriad-pro-bold;
+            display: block;
+            margin-left: 3.1rem;
+            text-decoration: underline;
+          }
+
+          .body-style-1  {
+            color: $color-dark-gray;
+            padding-left: 3.2rem;
+            margin-top: 1.0rem;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// SIDE NAV PAGE
+.side-nav-page {
+  .download-link-list-container {
+    .list-container {
+      width: 80%;
+    }
+
+    .download-links {
+      &.underline:not(:last-child),
+      &.underline:first-child {
+        border-bottom: 1px solid $color-light-gray;
+      }
+
+      .download-link {
+        .link-items {
+          .text-elements {
+            h6 {
+              line-height: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// STANDARD PAGE
+.standard-page {
+  .download-link-list-container {
+    .list-container {
+      width: 40%;
+    }
+
+    .row {
+      justify-content: center;
+    }
+
+    .download-links {
+      &.underline:not(:last-child) {
+        border-bottom: 1px solid $color-light-gray;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .download-link-list-container {
+      .list-container {
+        width: 80%;
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .download-link-list-container {
+      .list-container {
+        width: 60%;
+      }
+    }
+  }
+}
+

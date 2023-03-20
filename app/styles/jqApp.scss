@@ -1,0 +1,69 @@
+/**********************************************************
+  Base font styles
+**********************************************************/
+:root {
+  --mdc-theme-error: #FF0000 !important;
+  --mdc-theme-primary: #008CD2 !important;
+}
+
+html,
+body {
+  font-size: 10px;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgb(255, 255, 255);
+
+  a {
+    font-size: 14px;
+  }
+
+  &.search-page {
+    height: 100%;
+  }
+
+  // Extra Small (Portrait Phone)
+  @media (max-width: 575px) {
+    font-size: 8px;
+  }
+
+  // Small (Landscape Phone)
+  @media (min-width: 576px) and (max-width: 767px) {
+    font-size: 8px;
+  }
+
+  // Medium (Tablet)
+  @media (min-width: 768px) and (max-width: 991px) {
+    font-size: 9px;
+  }
+
+  // Large (Desktop) with 9+ menus
+  @media (min-width: 992px) and (max-width: 1110px) {
+    font-size: 9px;
+  }
+
+  // Large (Desktop)
+  @media (min-width: 1111px) and (max-width: 1366px) {
+    font-size: 10px;
+  }
+
+  //  TODO: Remove the comment of this part when site has less than 9 menus
+  // Large (Desktop)
+  // @media (min-width: 992px) and (max-width: 1366px) {
+  //   font-size: 10px;
+  // }
+
+  // Extra Large (Large Desktop)
+  @media (min-width: 1200px) {
+    font-size: 10px;
+  }
+}
+
+body {
+  position: relative;
+}
+
+@import 'variables';
+
+@import 'app-sysco';
+@import 'app-sysco-labs';

@@ -1,0 +1,74 @@
+body.site-sysco-labs {
+  @import 'themes/_sysco-labs';
+  @import '_app-shared';
+
+  /* Theme overrides */
+  .navbar.navbar-default .navbar-nav > li.nav-button {
+    padding: 0.25rem 1.3rem 0 0;
+  }
+
+  .navbar.navbar-default .navbar-toggler {
+    margin-top: 0;
+  }
+
+  @media (max-width: 991px) {
+    .navbar.navbar-default .navbar-brand .logo {
+      width: 14rem;
+    }
+  }
+
+  /* Print overrides */
+  @media print {
+    *,
+    *:before,
+    *:after {
+      background: transparent !important;
+      color: #000 !important; /* Black prints faster */
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    &::before {
+      content: 'Sysco | LABS';
+      color: #000;
+      @include myriad-pro-bold;
+      font-size: 36px;
+    }
+
+    .st-sticky-share-buttons {
+      display: none;
+    }
+
+    nav.navbar {
+      display: none;
+    }
+
+    .standard-page-hero {
+      padding: 50px 0 0 0;
+
+      h6,
+      h1,
+      p {
+        color: #000;
+      }
+    }
+
+    footer {
+      background: none;
+
+      .footer-logo-container .rights-reserved {
+        color: #000;
+      }
+
+      .terms {
+        display: none;
+        color: #000;
+      }
+
+      .links {
+        display: none;
+      }
+    }
+  }
+}

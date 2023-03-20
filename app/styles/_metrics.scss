@@ -1,0 +1,59 @@
+.metrics {
+  padding: 8.0rem 0;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 7.0rem;
+  }
+
+  .metric-container {
+    display: flex;
+    justify-content: space-around;
+
+    .metric-block {
+      padding: 0 0.8rem;
+      text-align: center;
+
+      .metric-value {
+        @include myriad-pro-bold;
+        font-size: 6.4rem;
+        margin-bottom: 2.4rem;
+      }
+
+      .metric-name {
+        @include myriad-pro-semibold;
+        font-size: 1.8rem;
+        color: $color-brand-primary;
+        margin-top: 2.4rem;
+        text-transform: uppercase;
+      }
+
+      .metric-units {
+        font-size: 1.8rem;
+        color: $color-med-gray;
+        margin-top: 0.6rem;
+      }
+
+      .divider {
+        width: 12.0rem;
+        border-bottom: 1px solid $color-med-gray;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .metrics {
+
+    .metric-container {
+      display: flex;
+      flex-direction: column;
+
+    }
+    .metric-block {
+      margin-bottom: 40px;
+    }
+  }
+}

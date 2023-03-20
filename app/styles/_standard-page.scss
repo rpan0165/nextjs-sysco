@@ -1,0 +1,90 @@
+.standard-page-hero {
+  color: $color-white;
+  background-color: rgba(106, 115, 123, 0.8);
+  background-size: cover;
+  background-position: top;
+  padding: 41.0rem 5% 5% 8.6rem;
+
+  .container-fluid, .col-md-9 {
+    padding: 0;
+  }
+
+  h6 {
+    @include myriad-pro-black;
+    color: $color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+  }
+
+  h1 {
+    margin-bottom: 1.0rem;
+  }
+
+  .logo-container {
+    text-align: center;
+    position: relative;
+    top: -15.0rem;
+
+    .image-large {
+      max-width: 90.0rem;
+    }
+    .image-medium {
+      max-width: 30.0rem;
+    }
+  }
+
+  &.story-page {
+    h1 {
+      text-transform: capitalize;
+    }
+  }
+
+  p {
+    @extend .body-style-3;
+    color: $color-white;
+    text-align: left;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .standard-page-hero {
+    .logo-container {
+      .image-large {
+        max-width: 60.0rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .standard-page-hero {
+    padding: 132px 20px;
+    text-align: center;
+
+    h1 {
+      margin-bottom: 25px;
+    }
+
+    .logo-container {
+      top: 0;
+      .image-medium {
+        width: 17.0rem;
+      }
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 575px){
+  .standard-page-hero {
+    .logo-container {
+      .image-large {
+        width: 35.0rem;
+      }
+    }
+  }
+}

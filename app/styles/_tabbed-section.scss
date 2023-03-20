@@ -1,0 +1,222 @@
+.tabbed-section {
+  padding: 5.0rem 0 0;
+
+  .card-container {
+    padding: 2.0rem 0 4.0rem;
+    .text-container {
+      h2 {
+        font-size: 4.8rem;
+      }
+    }
+  }
+
+  .tabbed-section-header {
+
+    h2 {
+      @include myriad-pro-bold;
+      letter-spacing: -0.2rem;
+    }
+
+    h6 {
+      line-height: 3.2rem;
+      margin-top: 0.9rem;
+    }
+  }
+
+  .tabbed-wrapper {
+    position: relative;
+    padding-bottom: 5.0rem;
+  }
+
+  .slider-arrow {
+
+    position: absolute;
+    top: 40%;
+    margin-top: -1.7rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+      opacity: 0.55;
+    }
+
+    &.arrow-left {
+      left: -3.0rem;
+      transform: rotate(180deg);
+
+      &.disabled-opacity {
+        opacity: .3;
+      }
+    }
+
+    &.arrow-right {
+      right: -3.0rem;
+
+      &.disabled-opacity {
+        opacity: .3;
+      }
+    }
+
+
+
+  }
+
+  .swiper-pagination {
+    position: inherit;
+
+    .swiper-pagination-bullet {
+      background-color: #242121;
+      width: 0.6rem;
+      height: 0.6rem;
+      margin-right: 0.8rem;
+      opacity: 0.4;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: $color-brand-primary;
+      transform: scale(1.5);
+      width: 1.0rem;
+      height: 1.0rem;
+      border: solid 0.4rem $color-brand-primary;
+      opacity: 1;
+    }
+
+  }
+
+  .horizontal-tabs {
+    width: 100%;
+    padding: 0;
+    padding-right: 0;
+
+    .tabbed-slider {
+      position: relative;
+
+      .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .hide-tabs-scrollbar {
+      .tabs-container {
+        text-align: center;
+        margin-top: 2.0rem;
+
+        .nav-tabs {
+          border: none;
+
+          li {
+            float: none;
+            display: inline-block;
+
+            .decoration {
+              border-bottom: 0.4rem solid $color-brand-primary;
+            }
+
+            a {
+              @include myriad-pro-black;
+              display: flex;
+              letter-spacing: 0.2rem;
+              text-transform: uppercase;
+              color: #333333;
+              background-color: $color-white;
+              border: none;
+              padding: 1.0rem 0;
+              margin: 0 1.5rem;
+              border-bottom: 0.4rem solid transparent;
+
+              &:hover {
+                text-decoration: none;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1060px) {
+  .tabbed-section {
+    .slider-arrow {
+      height: 3rem;
+
+      &.arrow-right {
+        right: -1.5rem;
+      }
+
+      &.arrow-left {
+        left: -1.5rem;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, tabelts, less than 992px)
+@media (max-width: 991px) {
+  .tabbed-section {
+    .horizontal-tabs {
+      .hide-tabs-scrollbar {
+        .tabs-container {
+          height: auto;
+
+          .slider-dropdown {
+            padding: 12px 24px;
+            position: relative;
+            width: 100%;
+
+            select {
+              font-size: 16px;
+              border: solid 1px darken($color-light-gray, 5%);
+              color: $color-black;
+              font-weight: 400;
+              height: 34px;
+              -webkit-appearance: none;
+            }
+
+            i {
+              font-size: 16px;
+              pointer-events: none;
+              position: absolute;
+              right: 34px;
+              top: 21px;
+            }
+          }
+        }
+      }
+
+      .container {
+        padding-bottom: 0;
+        .tabbed-slider {
+          .row {
+            margin: 0;
+          }
+
+          .swiper-pagination {
+            bottom: -15px !important;
+            margin-bottom: 4rem;
+          }
+        }
+      }
+
+      .slider-arrow {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .horizontal-tabs {
+    .tabbed-slider {
+      .swiper-wrapper {
+        .image-caption {
+          padding: 4rem 1rem;
+          margin: 2rem 2rem 2rem 4.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+/**********************************************************
+  Z-INDEX VARIABLES
+**********************************************************/
+$zindex-fixed: 1030 !default;
+
+/**********************************************************
+  FONT VARIABLES
+**********************************************************/
+$font-weight-normal: normal !default;
+
+@mixin myriad-pro-semibold {
+  font-family: myriad-pro, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin myriad-pro-regular {
+  font-family: myriad-pro, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin myriad-pro-bold {
+  font-family: myriad-pro, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin myriad-pro-black {
+  font-family: myriad-pro, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
+
+@mixin myriad-pro-light {
+  font-family: myriad-pro, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+

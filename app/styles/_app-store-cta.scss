@@ -1,0 +1,63 @@
+.app-store-cta {
+  padding: 7.5rem 0;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h3 {
+    margin-bottom: 2.0rem;
+  }
+
+  .link-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .app-store-button {
+      img {
+        max-width: 20.8rem;
+      }
+
+      &:nth-child(2) {
+        margin-left: 2.4rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .app-store-cta {
+    .link-container {
+      .app-store-button {
+        &:first-child {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .app-store-cta {
+    text-align: center;
+    padding: 40px 30px;
+
+    .link-container {
+      flex-direction: column;
+      margin-top: 20px;
+
+      .app-store-button {
+        &:first-child {
+          margin-bottom: 15px;
+        }
+
+        &:nth-child(2) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

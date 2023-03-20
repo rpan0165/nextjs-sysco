@@ -1,0 +1,25 @@
+.recipe-page-section {
+  padding: 7rem 0;
+
+  h6 {
+    color: $color-black;
+    @include myriad-pro-bold;
+    margin-bottom: 2rem;
+  }
+
+  .ingredients {
+    margin-bottom: 3rem;
+  }
+
+  ol {
+    -webkit-padding-start: 1.5rem;
+    @extend .body-style-1;
+  }
+
+  .print-button {
+    font-size: 1.3rem;
+    height: auto;
+    padding: 0.4rem 2.8rem;
+  }
+
+}

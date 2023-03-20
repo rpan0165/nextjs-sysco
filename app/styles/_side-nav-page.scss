@@ -1,0 +1,223 @@
+
+.side-nav-container {
+
+  padding-top: 5.4rem;
+
+  #side-nav {
+    background-color: $color-white;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    box-shadow: 0 0.1rem 0.4rem 0 rgba(0, 0, 0, 0.15);
+
+    .side-nav-link {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      @include myriad-pro-bold;
+      list-style: none;
+
+      a {
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
+        color: $color-black;
+        padding-left: 2.0rem;
+        margin: 0;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-light-gray;
+      }
+
+      .nav-link {
+        border-left: solid transparent 0.5rem;
+
+        &.active {
+          border-left: solid $color-brand-primary 0.5rem;
+        }
+      }
+    }
+  }
+
+  .side-nav-content {
+
+    padding-bottom: 5.0rem;
+
+    .content-section {
+
+
+      &:not(:first-child) {
+        margin-top: 2.5rem;
+      }
+
+      &:last-child {
+        margin-bottom: 5.4rem;
+      }
+
+      .content-section-header {
+
+        margin-bottom: 4.0rem;
+        padding-left: 1.3rem;
+        text-transform: uppercase;
+        line-height: 2.6rem;
+        @include myriad-pro-bold;
+
+        &::before {
+          display: block;
+          content: " ";
+          margin-top: -12.0rem;
+          height: 12.0rem;
+          visibility: hidden;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .wide-text-block {
+      padding: 0;
+      margin-left: 0;
+    }
+
+    .download-link-list-container {
+      margin-left: 5.6rem;
+    }
+
+    .contact-card-container {
+      padding-left: 1.3rem;
+
+      .contact-card {
+        margin: 1.5rem 1.5rem 1.5rem 0;
+        padding: 3.0rem 2.0rem;
+
+        .contact-details {
+
+          .detail-row {
+
+            p {
+              overflow: hidden;
+              display: block;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+
+              a {
+                font-size: 1.4rem;
+              }
+            }
+
+            p:hover {
+              overflow: visible;
+              text-overflow: unset;
+              white-space: normal;
+              display: block;
+            }
+          }
+        }
+
+        h5 {
+          font-size: 1.3rem;
+          letter-spacing: 0.15rem;
+          @include myriad-pro-bold;
+          color: $color-dark-gray;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+
+  .side-nav-container {
+    padding-top: 0;
+
+    .dropdown-nav {
+      max-width: 100%;
+    }
+
+    .fixed-top {
+      width: 100%;
+      box-shadow: 0 0.1rem 0.4rem 0 rgba(0,0,0,0.15);
+    }
+
+    .side-nav-content {
+      padding: 60px 0;
+
+      .content-section {
+
+        &:not(:first-child) {
+          margin-top: 85px;
+        }
+
+        .content-section-header::before {
+          margin-top: -175px;
+          height: 175px;
+          content: " ";
+          visibility: hidden;
+          pointer-events: none;
+          display: block;
+        }
+
+        .contact-card-container {
+          .row {
+            justify-content: center;
+          }
+        }
+
+        .download-link-list-container {
+          margin-left: 0;
+
+          .list-container {
+            width: auto;
+          }
+
+          .row {
+            justify-content: center;
+            margin-right: 0;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .dropdown-nav-container {
+      padding: 0 10px;
+      background-color: $color-white;
+      z-index: 1;
+
+      .nav-dropdown {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+
+        .form-control {
+          font-size: 16px;
+          border: solid 1px darken($color-light-gray, 5%);
+          font-weight: 400;
+          height: 34px;
+          color: $color-black;
+        }
+
+        i {
+          font-size: 16px;
+          pointer-events: none;
+          position: absolute;
+          right: 43px;
+          top: 38px;
+        }
+      }
+    }
+
+    .side-nav-content .content-section {
+
+      .content-section-header {
+        line-height: 0;
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 0;
+      }
+
+      .wide-text-block {
+        text-align: center;
+      }
+    }
+  }
+}

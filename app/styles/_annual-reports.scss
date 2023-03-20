@@ -1,0 +1,78 @@
+.annual-reports {
+  padding: 5.5rem 0;
+  background-color: $color-lighter-gray;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 5.5rem;
+  }
+
+  .report-container {
+    background-color: $color-white;
+    border-radius: 3px;
+    border: 1px solid darken($color-light-gray, 5%);
+    display: flex;
+
+    &:not(:last-of-type) {
+      margin-bottom: 3.0rem;
+    }
+
+    .preview-image {
+      width: 12.0rem;
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    .report-body {
+      text-align: left;
+      padding: 3.6rem 5.0rem;
+
+      h3 {
+        font-size: 2.6rem;
+        margin-bottom: 3.5rem;
+      }
+
+      .report-links {
+        display: flex;
+
+        .report-link {
+          &:nth-child(n+2) {
+            margin-left: 6.2rem;
+          }
+
+          .pdf-icon {
+            margin-right: 1.6rem;
+            margin-top: -0.3rem;
+          }
+
+          a {
+            font-size: 1.8rem;
+            display: inline-block;
+            color: $color-dark-gray;
+          }
+        }
+
+      }
+    }
+  }
+
+  .view-all {
+    margin-top: 5.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .annual-reports {
+    .report-container {
+      .preview-image {
+        display: none;
+      }
+
+      .report-body {
+        text-align: center;
+      }
+    }
+  }
+}

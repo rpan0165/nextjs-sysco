@@ -1,0 +1,153 @@
+.media-contacts-section {
+  background-color: $color-lighter-gray;
+  padding: 8.0rem 0;
+  flex-wrap: wrap;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.875rem;
+  }
+
+  .containerSubheading {
+    @include myriad-pro-regular;
+    @extend .body-style-1;
+    padding-bottom: 3.8rem;
+    text-align: center;
+  }
+
+  .media-contacts {
+    display: flex;
+    justify-content: center;
+
+    &.admin {
+       display: block;
+
+      .contact-card {
+        float: left;
+        display: block;
+      }
+     }
+  }
+}
+
+.contact-card {
+
+  background-color: $color-white;
+  border: solid 1px darken($color-light-gray, 5%);
+  border-radius: 3px;
+  padding: 3.0rem 3.8rem;
+  margin: 1rem;
+  max-width: 30%;
+  overflow-wrap: normal;
+
+  .organizationDesc {
+    color: $color-dark-gray;
+    font-size: 1.3rem;
+    @include myriad-pro-regular;
+    max-width: 21.5rem;
+    line-height: 1;
+    margin-top: 2.4rem;
+  }
+
+  i {
+    color: $color-brand-primary;
+    font-size: 1.6rem;
+  }
+
+  .organization-name {
+    @include myriad-pro-bold;
+    font-size: 1.25rem;
+    letter-spacing: 0.10rem;
+    margin: 0;
+    color: $color-dark-gray;
+  }
+
+  h6 {
+    @include myriad-pro-bold;
+    color: $color-black;
+    line-height: 3.4rem;
+    margin-bottom: 2.0rem;
+    margin-top: 1.4rem;
+  }
+
+  .title {
+    @include myriad-pro-regular;
+    @extend .body-style-1;
+    font-weight: 400;
+    letter-spacing: 0rem;
+    color: $color-dark-gray;
+    line-height: 2.7rem;
+    max-width: 24.7rem;
+  }
+
+  .address {
+    @extend .body-style-1;
+    font-weight: 400;
+    letter-spacing: 0rem;
+    color: $color-dark-gray;
+    line-height: 2.7rem;
+    max-width: 24.7rem;
+    white-space: pre-line;
+  }
+
+  .contact-details {
+    margin-top: 2.8rem;
+
+    .card-distance p {
+      color: $color-dark-gray;
+      @include myriad-pro-bold;
+      font-size: 1.2rem;
+      margin-top: 30px;
+    }
+
+    .detail-row:not(:first-child) {
+      margin-top: 1.0rem;
+    }
+
+    .detail-row {
+      display: flex;
+      align-items: center;
+
+      .contact-icon {
+        width: 1.6rem;
+        margin-right: 0.8rem;
+        text-align: center;
+      }
+
+      p {
+        @include myriad-pro-semibold;
+        color: $color-dark-gray;
+        margin-bottom: 0;
+        letter-spacing: 0rem;
+
+        a, a:visited, a:hover, a:focus, a:active {
+          text-decoration: none;
+          font-size: 1.5rem;
+          color: $color-dark-gray;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  .contact-card {
+    max-width: 85%;
+
+    h6 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .contact-card {
+    max-width: 45%;
+
+    h6 {
+      font-size: 24px;
+    }
+  }
+}

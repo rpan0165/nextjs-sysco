@@ -1,0 +1,50 @@
+.download-link-dropdown-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+
+    .dropdown {
+
+      select.form-control {
+        height: 40px;
+        width: 408px;
+        @include fontSize(16px);
+        color: $color-black;
+        @include myriad-pro-regular;
+        background-color: rgba(240, 239, 235, 0.2);
+        border: solid 1px $color-light-gray;
+      }
+    }
+
+  i {
+    font-size: 16px;
+    pointer-events: none;
+    position: absolute;
+    right: 29px;
+    top: 23px;
+    color: $color-med-gray;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .download-link-dropdown-container {
+
+    .dropdown {
+
+      select.form-control {
+        width: 325px;
+
+      }
+
+    }
+
+    i {
+      right: 30px;
+      top: 20px;
+
+    }
+  }
+
+}
