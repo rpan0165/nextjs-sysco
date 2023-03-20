@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 
 // component imports
 import FeatureCallout from './components/FeatureCallout'
-import HeroSlider from './Components/HeroSlider'
+import HeroSlider from './components/HeroSlider'
 import FeatureSection from './components/FeatureSection'
 
 // contentstack sdk imports
