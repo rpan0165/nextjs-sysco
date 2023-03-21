@@ -1,5 +1,5 @@
 import React from 'react'
-// import Script from 'next/script'
+import Script from 'next/script'
 
 const Header = () => {
   return (
@@ -16,12 +16,14 @@ const Header = () => {
       {/* MOBILE SPECIFIC META */}
 
       {/* Icons */}
-      <script src="https://kit.fontawesome.com/5a65935042.js" crossorigin="anonymous"></script>
-
+      {/* <script src="https://kit.fontawesome.com/5a65935042.js" crossorigin="anonymous"></script> */}
+      <Script src="https://kit.fontawesome.com/5a65935042.js" crossorigin="anonymous" />
+  
       {/* Styles */}
 
       {/* Scripts */}
-      <script type="text/javascript" src="../scripts/contentstack.min.js"></script>
+      {/* <script type="text/javascript" src="../scripts/contentstack.min.js"></script> */}
+      <Script type="text/javascript" src="../scripts/contentstack.min.js" />
 
       {/* Cookie Consent */}
     </head>

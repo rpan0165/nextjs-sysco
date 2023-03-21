@@ -2,8 +2,7 @@ import React, { Component } from "react";
 
 const FeatureSection = (featureSectionContent) => {
 
-    const contentPath = featureSectionContent.featureSectionContent.entry;
-    console.log(featureSectionContent.featureSectionContent.entry)
+    const contentPath = featureSectionContent.props.feature_section;
 
   return (
       <>
@@ -19,7 +18,7 @@ const FeatureSection = (featureSectionContent) => {
                       {
                         contentPath.link.map((link, index) => {
                           return(                
-                              <li><a href={link.href}>{link.title}</a></li>               
+                              <li key={index}><a href={link.href}>{link.title}</a></li>               
                           )})
                       }
                        

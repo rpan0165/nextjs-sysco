@@ -4,7 +4,8 @@ import jqApp from './styles/jqApp.scss'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Header from './components/Header'
-
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
 // metadata will fetch from custom header component at 'app/components/Header'
 // export const metadata = {
@@ -39,4 +40,3 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
-
