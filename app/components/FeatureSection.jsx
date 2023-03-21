@@ -11,7 +11,7 @@ const FeatureSection = (featureSectionContent) => {
               <div class="container-fluid">                  
                 <div class={contentPath.text_location == "Left" ? "row" : "row justify-content-end"}>                      
                 <div class="col-md-6">
-                    <h3>{contentPath.text.title}</h3>
+                    <h3>{contentPath.text.heading}</h3>
                     <div class="feature-section-p" dangerouslySetInnerHTML={{ __html: contentPath.text.description }}></div>
                     <br/>
                     <ul class="linked-list">
